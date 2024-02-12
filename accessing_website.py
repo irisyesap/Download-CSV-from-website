@@ -19,7 +19,7 @@ try:
     driver.execute_script("arguments[0].click();", element)
     
     # For new users, the subscribe tab will come up, cancel that first
-    element2 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[2]/div[2]/nav/div[1]/div[1]/div[3]/div[1]/div/header/button")))  # Replace with your full XPath
+    element2 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[2]/div[2]/nav/div[1]/div[1]/div[3]/div[1]/div/header/button")))  
 
     # Click the element
     driver.execute_script("arguments[0].click();", element2)
@@ -31,7 +31,7 @@ try:
     driver.execute_script("arguments[0].click();", element)
     
     # Click on the one for downloading as semi-colon, can be changed based off button[#]
-    element3 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[2]/div[2]/nav/div[1]/div[1]/div[1]/div/div/div/ul/li/button[1]")))  # Replace with your full XPath
+    element3 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[2]/div[2]/nav/div[1]/div[1]/div[1]/div/div/div/ul/li/button[1]")))  
 
     # Click the element
     driver.execute_script("arguments[0].click();", element3)
