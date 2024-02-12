@@ -11,10 +11,16 @@ try:
     # Open the webpage
     driver.get("https://help.sap.com/whats-new/6a6876bb02204429bfc72cf8b861a866?locale=en-US")
 
-    # Find the button element by its XPath, possible for other buttons but not download csv
-    element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(text(), 'Help')]")))
+    # Find the button element by its XPath of the download csv 
+    element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'Download CSV')]")))
     
     # Click on the button
+    driver.execute_script("arguments[0].click();", element)
+    
+    # Wait until a new element shows up, and chooses semi-colon by xpath
+    element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Semi-Colon')]")))
+    
+    # Click on the button for downloading
     driver.execute_script("arguments[0].click();", element)
     
     #failed test case
