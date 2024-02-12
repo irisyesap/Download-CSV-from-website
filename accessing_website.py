@@ -36,12 +36,12 @@ try:
     # Click the element
     driver.execute_script("arguments[0].click();", element3)
 
-    # Makes sure for the website to open for 10 seconds to download the file successfully
-    time.sleep(10)
+    # Makes sure for the website to open for 5 seconds to download the file successfully
+    time.sleep(5)
     
     #failed test case
     #driver.execute_script('document.evaluate("//button[contains(text(), \'Download CSV\')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();')
+ 
     
-
 finally:
-    pass
+    driver.quit()
